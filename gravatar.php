@@ -3,8 +3,8 @@
  * Gravatar Helper
  *
  * @author Hayden Harnett
- * @version 1.0
- * @
+ * @version 1.1
+ * @lastupdated 20091002
  * @url http://hayden.id.au/
  */
 
@@ -113,16 +113,17 @@ class GravatarHelper extends AppHelper
 	{
 		return Security::hash(strtolower($email), $this->_hashType);
 	}
-	
+		
 	/**
-	 * Public image function
+	 * undocumented function
 	 *
 	 * @param string $email 
-	 * @param array $options 
+	 * @param string $options 
+	 * @param string $html_options 
 	 * @return HTML image tag of the gravatar
 	 * @author Hayden Harnett
 	 */
-	public function image($email, $options)
+	public function image($email, $options, $html_options = array())
 	{
 		$this->_validateOptions($options);
 		
@@ -132,8 +133,7 @@ class GravatarHelper extends AppHelper
 		{
 			$get .= "&d=".$this->_default;
 		}
-		
-		return $this->Html->image($this->_url.$this->_hashEmail($email).$get, array('width' => $this->_size, 'height' => $this->_size));
+		return $this->Html->image($this->_url.$this->_hashEmail($email).$get, $html_options);
 	}	
 }
 ?>
