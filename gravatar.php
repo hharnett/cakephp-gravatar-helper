@@ -75,7 +75,7 @@ class GravatarHelper extends AppHelper
 	{
 		if (isset($options['rating']))
 		{
-			if (in_array($_rating, $this->_possibleRatings))
+			if (in_array($this->_rating, $this->_possibleRatings))
 			{
 				$this->_rating = $options['rating'];
 			}
