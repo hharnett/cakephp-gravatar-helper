@@ -1,13 +1,13 @@
 Gravatar Helper for CakePHP
-Version 1.1
+Version 1.2
 Author: Hayden Harnett <haydenharnett@gmail.com>
 URL: http://hayden.id.au
 
 Usage
 
-1. Put gravatar.php in /app/views/helpers
+1. Clone the repo in /app/plugins and rename the folder into `gravatar` 
 2. Add gravatar to $helpers array in each controller which you wish to use it
-	e.g. var $helpers = array('Html', 'Javascript', 'Gravatar');
+	e.g. var $helpers = array('Html', 'Javascript', 'Gravatar.Gravatar');
 
 3. In a view call the image function with an email address of the gravatar any (or no) of the following options, followed by any HTML image tag attributes you wish to have (e.g. alt, style, width, height etc):
 	- size (between 1 and 512 pixels)
